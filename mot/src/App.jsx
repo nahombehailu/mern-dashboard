@@ -9,6 +9,7 @@ import Support from './pages/Support';
 import About from './pages/About';
 import Signup from './pages/Signup';
 import Signin from './pages/Signin';
+import FooterComp from './components/Footer';
 export default function App() {
   return (
     
@@ -23,7 +24,7 @@ export default function App() {
       <Route path='/signup' element={<Signup />} /> 
       <Route path='/signin' element={<Signin />} /> 
     </Routes>
-
+<FooterComp />
     </BrowserRouter>
   )
 }
