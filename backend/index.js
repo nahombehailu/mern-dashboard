@@ -19,7 +19,7 @@ app.listen(PORT,(req,res)=>{
     console.log(`server is running on port ${PORT}`)
 });
 
-app.use('/api/user',userRoute);
+// app.use('/api/user',userRoute);
 app.use('/api/auth',authRoute);
 
 app.use((err,req,res,next)=>{

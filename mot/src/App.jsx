@@ -8,6 +8,7 @@ import Core from './pages/Core';
 import Support from './pages/Support';
 import About from './pages/About';
 import Signup from './pages/Signup';
+import Signin from './pages/Signin';
 export default function App() {
   return (
     
@@ -20,6 +21,7 @@ export default function App() {
       <Route path='/support' element={<Support />} /> 
       <Route path='/about' element={<About />} /> 
       <Route path='/signup' element={<Signup />} /> 
+      <Route path='/signin' element={<Signin />} /> 
     </Routes>
 
     </BrowserRouter>
