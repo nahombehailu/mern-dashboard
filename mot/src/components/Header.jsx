@@ -4,6 +4,7 @@ import { AiOutlineSearch } from 'react-icons/ai';
 import { FaMoon, FaSun } from 'react-icons/fa';
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect, useState } from 'react';
+import {toggleTheme} from  '../redux/theme/themeSlice'
 
 
 export default function Header() {
@@ -12,8 +13,10 @@ export default function Header() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { currentUser } = useSelector((state) => state.user);
+  const { theme } = useSelector((state) => state.theme);
+
   return (
-    <Navbar className='border-b-2'>
+    <Navbar className='border-b-2 min-h-10'>
       <Link
         to='/'
         className='self-center whitespace-nowrap text-sm sm:text-xl font-semibold dark:text-white'
@@ -40,9 +43,9 @@ export default function Header() {
           className='w-12 h-10 hidden sm:inline'
           color='gray'
           pill
-          // onClick={() => dispatch(toggleTheme())}
+          onClick={() => dispatch(toggleTheme())}
         >
-         
+         {theme==='light'? <FaSun />:<FaMoon />}
         </Button>
         {currentUser ? (
           <Dropdown
