@@ -11,6 +11,8 @@ import Signup from './pages/Signup';
 import FooterComp from './components/Footer';
 import SignIn from './pages/Signin';
 import Header from './components/Header';
+import Dashboard from './pages/Dahboard';
+import PrivateRoute from './components/PrivateRoute';
 export default function App() {
   return (
     
@@ -21,6 +23,8 @@ export default function App() {
       <Route path='/news' element={<News />} /> 
       <Route path='/core' element={<Core />} /> 
       <Route path='/support' element={<Support />} /> 
+      <Route element={<PrivateRoute />}>   <Route path='/dashboard' element={<Dashboard />} /> </Route>
+      <Route path='/dashboard' element={<Dashboard />} /> 
       <Route path='/about' element={<About />} /> 
       <Route path='/signup' element={<Signup />} /> 
       <Route path='/signin' element={<SignIn />} /> 
