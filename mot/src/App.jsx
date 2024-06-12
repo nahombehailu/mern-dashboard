@@ -1,7 +1,7 @@
 // import { Button } from "flowbite-react";
 import {BrowserRouter,Route,Routes}from 'react-router-dom'
 
-import Navbar from "./components/Navbar";
+import Navbars from "./components/Header";
 import Home from './pages/Home';
 import News from './pages/News';
 import Core from './pages/Core';
@@ -10,11 +10,12 @@ import About from './pages/About';
 import Signup from './pages/Signup';
 import FooterComp from './components/Footer';
 import SignIn from './pages/Signin';
+import Header from './components/Header';
 export default function App() {
   return (
     
     <BrowserRouter>
-    <Navbar />
+    <Header />
     <Routes>
       <Route path='/' element={<Home />} /> 
       <Route path='/news' element={<News />} /> 
